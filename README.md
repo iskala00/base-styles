@@ -1,8 +1,8 @@
-# @iskala00/styles
+# @iskala00/base-styles
 
 🎨 Современная SCSS библиотека стилей с поддержкой CSS переменных и адаптивного дизайна.
 
-[![npm version](https://badge.fury.io/js/@iskala00%2Fstyles.svg)](https://badge.fury.io/js/@iskala00%2Fstyles)
+[![npm version](https://badge.fury.io/js/@iskala00%2Fbase-styles.svg)](https://badge.fury.io/js/@iskala00%2Fbase-styles)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## ✨ Особенности
@@ -17,11 +17,13 @@
 ## 📦 Установка
 
 ```bash
-npm install @iskala00/styles
+npm install @iskala00/base-styles
 # или
-yarn add @iskala00/styles
+yarn add @iskala00/base-styles
 # или
-pnpm add @iskala00/styles
+pnpm add @iskala00/base-styles
+# или
+bun add @iskala00/base-styles
 ```
 
 ## 🚀 Быстрый старт
@@ -30,14 +32,14 @@ pnpm add @iskala00/styles
 
 ```scss
 // Подключить все стили с настройками по умолчанию
-@use '@iskala00/styles' as *;
+@use '@iskala00/base-styles' as *;
 ```
 
 ### Подключение с переопределением переменных
 
 ```scss
 // Подключить стили с кастомными настройками
-@use '@iskala00/styles' with (
+@use '@iskala00/base-styles' with (
   $font-family: ('Roboto', sans-serif),
   $spacing-md: 1.5rem,
   $border-radius-md: 12px,
@@ -49,7 +51,7 @@ pnpm add @iskala00/styles
 
 ```html
 <!-- Подключить скомпилированный CSS -->
-<link rel="stylesheet" href="node_modules/@iskala00/styles/dist/index.css">
+<link rel="stylesheet" href="node_modules/@iskala00/base-styles/dist/index.css">
 ```
 
 ## 🎨 Доступные переменные
@@ -135,7 +137,7 @@ h3 { font-size: clamp(1.5rem, 3vw, 2rem); }    /* 24px - 32px */
 ### Пример 1: Кастомная тема
 
 ```scss
-@use '@iskala00/styles' with (
+@use '@iskala00/base-styles' with (
   // Темная тема
   $font-family: ('JetBrains Mono', monospace),
   $spacing-md: 2rem,
@@ -154,7 +156,7 @@ h3 { font-size: clamp(1.5rem, 3vw, 2rem); }    /* 24px - 32px */
 ### Пример 2: Компактная тема
 
 ```scss
-@use '@iskala00/styles' with (
+@use '@iskala00/base-styles' with (
   // Компактные отступы
   $spacing-xs: 0.125rem,
   $spacing-sm: 0.25rem,
@@ -172,7 +174,7 @@ h3 { font-size: clamp(1.5rem, 3vw, 2rem); }    /* 24px - 32px */
 
 ```tsx
 // styles/globals.scss
-@use '@iskala00/styles' with (
+@use '@iskala00/base-styles' with (
   $font-family: ('Inter', system-ui, sans-serif),
   $container-max-width-px: 1200px
 );
@@ -224,16 +226,18 @@ Object.entries(theme).forEach(([key, value]) => {
 
 ## 🛠️ Совместимость
 
-- **Sass**: Dart Sass 1.32.0+
+- **Sass**: Dart Sass 1.93.0+
+- **TypeScript**: 5.0+
 - **Браузеры**: Современные браузеры с поддержкой CSS переменных
 - **Фреймворки**: React, Vue, Angular, Svelte и другие
 - **Сборщики**: Webpack, Vite, Parcel, Rollup
+- **Среды выполнения**: Node.js, Bun
 
 ## 📚 Дополнительные ресурсы
 
-- [📖 Документация](https://github.com/iskala00/styles)
-- [🐛 Сообщить о баге](https://github.com/iskala00/styles/issues)
-- [💡 Предложить улучшение](https://github.com/iskala00/styles/issues)
+- [📖 Документация](https://github.com/iskala00/base-styles#readme)
+- [🐛 Сообщить о баге](https://github.com/iskala00/base-styles/issues)
+- [💡 Предложить улучшение](https://github.com/iskala00/base-styles/issues)
 
 ## 📄 Лицензия
 
