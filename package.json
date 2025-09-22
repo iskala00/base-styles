@@ -8,14 +8,14 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "sass": "./src/index.scss",
+      "sass": "./dist/index.scss",
       "style": "./dist/index.css",
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.js"
     },
-    "./scss": "./src/index.scss",
-    "./scss/*": "./src/*"
+    "./scss": "./dist/index.scss",
+    "./scss/*": "./dist/*"
   },
   "files": [
     "dist",

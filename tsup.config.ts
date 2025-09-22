@@ -17,12 +17,13 @@ export default defineConfig({
       stdio: "inherit",
     });
 
-    // Копируем исходные SCSS файлы
-    execSync("cp -r src/*.scss dist/ 2>/dev/null || true", {
-      stdio: "inherit",
-    });
-    execSync("cp -r src/**/*.scss dist/ 2>/dev/null || true", {
-      stdio: "inherit",
-    });
+    // Копируем исходные SCSS файлы с сохранением структуры папок
+    // Используем rsync для macOS совместимости
+    execSync(
+      "rsync -a --include='*/' --include='*.scss' --exclude='*' src/ dist/",
+      {
+        stdio: "inherit",
+      }
+    );
   },
 });
