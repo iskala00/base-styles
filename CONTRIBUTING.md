@@ -6,7 +6,7 @@ This project uses [Conventional Commits](https://www.conventionalcommits.org/) f
 
 ### Commit Message Format
 
-```
+```md
 <type>[optional scope]: <description>
 
 [optional body]

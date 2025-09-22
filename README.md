@@ -21,7 +21,7 @@ npm install @iskala00/base-styles
 # или
 yarn add @iskala00/base-styles
 # или
-pnpm add @iskala00/base-styles
+pnpm add @iskala00/base-styles 
 # или
 bun add @iskala00/base-styles
 ```
