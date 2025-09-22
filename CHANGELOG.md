@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.2](https://github.com/iskala00/base-styles/compare/v1.0.1...v1.0.2) (2025-09-22)
+
+
+### Bug Fixes
+
+* update SCSS file paths in package.json and tsup.config.ts for correct distribution ([4149d36](https://github.com/iskala00/base-styles/commit/4149d36fac89e28e5bc83b54f1a8b7c8aa362886))
+
 ## [1.0.1](https://github.com/iskala00/base-styles/compare/v1.0.0...v1.0.1) (2025-09-22)
 
 
