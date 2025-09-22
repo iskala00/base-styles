@@ -1,0 +1,131 @@
+@use "sass:math";
+
+// =============================================================================
+// SCSS VARIABLES (зависимые от CSS переменных)
+// =============================================================================
+
+// Typography
+$font-family: var(--font-family) !default;
+$font-family-heading: var(--font-family-heading) !default;
+
+$font-size-xs: var(--font-size-xs) !default;
+$font-size-sm: var(--font-size-sm) !default;
+$font-size-base: var(--font-size-base) !default;
+$font-size-lg: var(--font-size-lg) !default;
+$font-size-xl: var(--font-size-xl) !default;
+$font-size-2xl: var(--font-size-2xl) !default;
+$font-size-3xl: var(--font-size-3xl) !default;
+$font-size-4xl: var(--font-size-4xl) !default;
+
+$font-weight-light: var(--font-weight-light) !default;
+$font-weight-normal: var(--font-weight-normal) !default;
+$font-weight-medium: var(--font-weight-medium) !default;
+$font-weight-semibold: var(--font-weight-semibold) !default;
+$font-weight-bold: var(--font-weight-bold) !default;
+$font-weight-extrabold: var(--font-weight-extrabold) !default;
+
+$line-height-tight: var(--line-height-tight) !default;
+$line-height-normal: var(--line-height-normal) !default;
+$line-height-relaxed: var(--line-height-relaxed) !default;
+
+// Spacing
+$spacing-xs: var(--spacing-xs) !default;
+$spacing-sm: var(--spacing-sm) !default;
+$spacing-md: var(--spacing-md) !default;
+$spacing-lg: var(--spacing-lg) !default;
+$spacing-xl: var(--spacing-xl) !default;
+$spacing-2xl: var(--spacing-2xl) !default;
+$spacing-3xl: var(--spacing-3xl) !default;
+
+// Borders
+$border-radius-sm: var(--border-radius-sm) !default;
+$border-radius-md: var(--border-radius-md) !default;
+$border-radius-lg: var(--border-radius-lg) !default;
+$border-radius-xl: var(--border-radius-xl) !default;
+$border-radius-full: var(--border-radius-full) !default;
+
+$border-width-sm: var(--border-width-sm) !default;
+$border-width-md: var(--border-width-md) !default;
+$border-width-lg: var(--border-width-lg) !default;
+
+// Shadows
+$shadow-sm: var(--shadow-sm) !default;
+$shadow-md: var(--shadow-md) !default;
+$shadow-lg: var(--shadow-lg) !default;
+$shadow-xl: var(--shadow-xl) !default;
+
+// Layout
+$container-max-width: var(--container-max-width) !default;
+$container-padding: var(--container-padding) !default;
+
+$header-height: var(--header-height) !default;
+$sidebar-width: var(--sidebar-width) !default;
+
+// Z-index
+$z-dropdown: var(--z-dropdown) !default;
+$z-sticky: var(--z-sticky) !default;
+$z-fixed: var(--z-fixed) !default;
+$z-modal-backdrop: var(--z-modal-backdrop) !default;
+$z-modal: var(--z-modal) !default;
+$z-popover: var(--z-popover) !default;
+$z-tooltip: var(--z-tooltip) !default;
+
+// Transitions
+$transition-fast: var(--transition-fast) !default;
+$transition-normal: var(--transition-normal) !default;
+$transition-slow: var(--transition-slow) !default;
+
+// Breakpoints
+$breakpoint-xs: var(--breakpoint-xs) !default;
+$breakpoint-sm: var(--breakpoint-sm) !default;
+$breakpoint-md: var(--breakpoint-md) !default;
+$breakpoint-lg: var(--breakpoint-lg) !default;
+$breakpoint-xl: var(--breakpoint-xl) !default;
+
+// Maps for responsive design
+$breakpoints: (
+  "xs": $breakpoint-xs,
+  "sm": $breakpoint-sm,
+  "md": $breakpoint-md,
+  "lg": $breakpoint-lg,
+  "xl": $breakpoint-xl,
+) !default;
+
+$spacings: (
+  "xs": $spacing-xs,
+  "sm": $spacing-sm,
+  "md": $spacing-md,
+  "lg": $spacing-lg,
+  "xl": $spacing-xl,
+  "2xl": $spacing-2xl,
+  "3xl": $spacing-3xl,
+) !default;
+
+$font-sizes: (
+  "xs": $font-size-xs,
+  "sm": $font-size-sm,
+  "base": $font-size-base,
+  "lg": $font-size-lg,
+  "xl": $font-size-xl,
+  "2xl": $font-size-2xl,
+  "3xl": $font-size-3xl,
+  "4xl": $font-size-4xl,
+) !default;
+
+// =============================================================================
+// RESPONSIVE SETTINGS
+// =============================================================================
+
+// Тип адаптива:
+// 1 = Отзывчивость (у контейнера нет брейкпоинтов)
+// 2 = По брейк-поинтам (контейнер меняет свою ширину по брейк-поинтам)
+$responsive-type: var(--responsive-type) !default;
+
+// Container settings
+$container-max-width-px: var(--container-max-width-px, 1370px) !default;
+$container-padding-px: var(--container-padding-px, 30px) !default;
+
+// Helper function for em conversion
+@function em($pixels, $context: 16) {
+  @return math.div($pixels, $context) * 1em;
+}
