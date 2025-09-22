@@ -1,5 +1,5 @@
 {
-  "name": "@iskala00/styles",
+  "name": "@iskala00/base-styles",
   "version": "1.0.0",
   "description": "SCSS styles library built with tsup",
   "type": "module",
@@ -19,18 +19,15 @@
   },
   "files": [
     "dist",
-    "src"
+    "CHANGELOG.md",
+    "README.md"
   ],
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "clean": "rm -rf dist",
-    "typecheck": "tsc --noEmit",
-    "lint": "echo 'No linting configured'",
-    "test": "echo 'No tests configured'",
-    "release": "semantic-release",
-    "release:dry": "semantic-release --dry-run",
-    "version": "echo $npm_package_version"
+    "test": "bun test",
+    "prepublishOnly": "bun run build",
+    "semantic-release": "semantic-release"
   },
   "keywords": [
     "scss",
@@ -39,18 +36,23 @@
     "typescript",
     "library"
   ],
-  "author": "Ivan Skala",
-  "license": "MIT",
-  "publishConfig": {
-    "access": "public"
+  "author": {
+    "name": "Ivan Skala",
+    "email": "iskala00@mail.ru",
+    "url": "https://github.com/iskala00"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iskala00/base-styles.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iskala00/base-styles/issues"
+  },
+  "homepage": "https://github.com/iskala00/base-styles#readme",
+  "license": "MIT",
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
-    "@semantic-release/commit-analyzer": "^13.0.1",
     "@semantic-release/git": "^10.0.1",
-    "@semantic-release/github": "^11.0.6",
-    "@semantic-release/npm": "^12.0.2",
-    "@semantic-release/release-notes-generator": "^14.1.0",
     "@types/bun": "latest",
     "sass": "^1.93.0",
     "semantic-release": "^24.2.9",
@@ -58,6 +60,7 @@
     "typescript": "^5.9.2"
   },
   "peerDependencies": {
-    "typescript": "^5"
+    "typescript": "^5",
+    "sass": "^1.93.0"
   }
 }
