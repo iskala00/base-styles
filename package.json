@@ -1,6 +1,6 @@
 {
   "name": "@iskala00/base-styles",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "SCSS styles library built with tsup",
   "type": "module",
   "main": "./dist/index.js",
